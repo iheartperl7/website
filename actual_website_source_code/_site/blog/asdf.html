@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asdf cheatsheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/simpleresets.css">
+    <link rel="stylesheet" href="../css/headerfooter-j.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        iheartperl7.com
+    </header>
+
+    <div class="container">
+        <h1>asdf cheatsheet</h1>
+<h2>Install Perl and set as current:</h2>
+<pre><code class="language-bash">asdf plugin-add perl # gotta install for each language
+asdf list-all perl  # show all available version #s
+asdf install perl 5.38.0
+asdf global perl 5.38.0 #(do this!!!, more info below)
+</code></pre>
+<p>Check it:</p>
+<pre><code class="language-bash">asdf list # all installed versions
+asdf current # (optional) shows what's currently used
+perl --version
+</code></pre>
+<p>If it doesn't show 5.38.0, try this:</p>
+<pre><code class="language-bash">source ~/.bashrc
+</code></pre>
+<h2>To uninstall asdf perly stuff:</h2>
+<p>Remove the perl line(s) from <code>~/.tool-versions</code> file using an editor, then</p>
+<pre><code class="language-bash">asdf uninstall perl 5.38.0 # addf unistall perl also works
+asdf uninstall perl 5.36.1
+asdf plugin-remove perl # asdf is done with perl!
+</code></pre>
+<h2>More info on asdf global:</h2>
+<p><code>asdf global perl 5.38.0</code> will create <code>~/.tool-versions</code> which looks like:</p>
+<pre><code class="language-bash">perl 5.38.0
+</code></pre>
+<h2>Adding and working with another version of perl:</h2>
+<pre><code class="language-bash">asdf install perl 5.36.1 # install 2nd perl
+asdf global perl 5.36.1
+perl --version # shows 5.36.1
+asdf global perl 5.38.0
+perl --version # now shows 5.38.0
+</code></pre>
+<h2>Different development directories need different perl:</h2>
+<p>In different development directories
+you may want to use a different version
+of perl.</p>
+<p>This will seem like magic,
+but you can make the right perl
+run whenever you are in that directory</p>
+<p>Go to right that development directory
+example:</p>
+<pre><code class="language-bash">cd ~/my-dev-stuff/perl/myproj
+</code></pre>
+<p>Now type the following command:</p>
+<pre><code class="language-bash">asdf local perl 5.38.0 # makes visiting the current directory magically use this version! wow!
+</code></pre>
+<p>This will create <code>./tool-versions</code></p>
+<h3>The end.  Thanks for reading! (like me!)</h3>
+
+    </div>
+
+    <footer>
+        Created with &#x2765; with Lume, Prism.js. <a href="https://github.com">Like us on Github</a>.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js" integrity="sha512-xKcnbsdT0KMoA4yrozkqZM1XJVTrPsjdQwvigxlAlxEDu8YDvC/jl+LfVqn0fY3Vs6m2y4a89JCHEIA/Z9zpmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-perl.min.js" integrity="sha512-e5s7Mg7OyCO9mM15tYydeeMKqkjsxgkk0SEnAmmxXL2KOidpO5XAnJ8SvR1lTeu4h4VUNTxv59oT+YQ9qogUlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" integrity="sha512-whYhDwtTmlC/NpZlCr6PSsAaLOrfjVg/iXAnC4H/dtiHawpShhT2SlIMbpIhT/IL/NrpdMm+Hq2C13+VKpHTYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

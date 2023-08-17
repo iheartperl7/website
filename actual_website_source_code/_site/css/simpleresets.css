@@ -1,0 +1,9 @@
+/* Resetting default margins and padding */
+body, h2, p, pre {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box
+}

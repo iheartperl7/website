@@ -1,0 +1,28 @@
+pre code {
+    background-color: #272822 !important;
+    border-bottom-left-radius: .375rem !important;
+    border-bottom-right-radius: .375rem !important;
+    display: block;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.code-header {
+    background-color: #343541;
+    font-family: 'Söhne', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding: .5rem 1rem;
+    color: rgb(217,217,227);
+    border-top-left-radius: .375rem;
+    border-top-right-radius: .375rem;
+    display: none;
+}
+
+pre {
+    margin-top: 0; /* Removing any default margin */
+}
+
+div pre[class*="language-"] {
+    padding: 0;
+}
