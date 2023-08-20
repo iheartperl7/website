@@ -3,7 +3,7 @@
 This is the source code for the 
  [iheartperl7.com](https://iheartperl7.com) site.
 
-This is a static website generated with 
+This is a static website created with 
 [Lume](https://lumeland.github.io/lume/), so 
 deployment, live updating, etc is same as Lume:
 
