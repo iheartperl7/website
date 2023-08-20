@@ -8,6 +8,8 @@ site.copy("css");
 site.copy("js");
 site.copy("images");
 site.copy("assets");
+site.copy("favicon.ico");
+site.copy("index.html");
 
 export default site;
 
